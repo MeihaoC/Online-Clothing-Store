@@ -1,0 +1,100 @@
+/* Styling for the footer container */
+.footer {
+  background-color: #000; /* Black background for consistency */
+  color: white; /* White text color for readability */
+  margin-top: 50px; /* Add space above the footer */
+  padding: 0; /* Remove default padding */
+}
+
+/* Footer content container */
+.footer-content {
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center */
+  padding: 50px 30px 30px; /* Add padding */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 40px; /* Space between sections */
+}
+
+/* Footer section styling */
+.footer-section {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 15px; /* Space between elements */
+}
+
+.footer-section h3 {
+  font-size: 1.3rem; /* Font size */
+  font-weight: 700; /* Bold */
+  margin: 0 0 10px 0; /* Margin */
+  color: white; /* White color */
+}
+
+.footer-section h4 {
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  margin: 0 0 15px 0; /* Margin */
+  color: white; /* White color */
+  text-transform: uppercase; /* Uppercase */
+  letter-spacing: 0.5px; /* Letter spacing */
+}
+
+.footer-section p {
+  font-size: 0.9rem; /* Font size */
+  color: #ccc; /* Light gray color */
+  margin: 0; /* Remove margin */
+  line-height: 1.6; /* Line height */
+}
+
+/* Styling for the links section inside the footer */
+.footer-links {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 10px; /* Space between links */
+}
+
+/* Styling for individual links in the footer */
+.footer-links a {
+  color: #ccc; /* Light gray color for the links */
+  text-decoration: none; /* Remove the default underline from links */
+  font-size: 0.9rem; /* Slightly smaller font size for footer links */
+  transition: color 0.2s ease; /* Smooth transition */
+  display: inline-block; /* Inline block */
+}
+
+/* Hover effect for footer links */
+.footer-links a:hover {
+  color: white; /* White color on hover */
+  transform: translateX(5px); /* Slight movement on hover */
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  border-top: 1px solid #333; /* Top border */
+  padding: 20px 30px; /* Padding */
+  text-align: center; /* Center align */
+  background-color: #111; /* Darker background */
+}
+
+.footer-bottom p {
+  margin: 0; /* Remove margin */
+  font-size: 0.85rem; /* Smaller font */
+  color: #999; /* Gray color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 30px; /* Reduce gap */
+    padding: 40px 20px 20px; /* Reduce padding */
+  }
+  
+  .footer-section h3 {
+    font-size: 1.1rem; /* Smaller heading */
+  }
+  
+  .footer-section h4 {
+    font-size: 0.95rem; /* Smaller heading */
+  }
+}

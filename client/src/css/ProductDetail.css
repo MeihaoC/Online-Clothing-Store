@@ -1,0 +1,302 @@
+/* ProductDetail page specific styles - body styles should be in index.css */
+
+/* Main container for product detail page */
+.product-detail {
+  max-width: 1200px; /* Limit the container's maximum width */
+  margin: 30px auto; /* Center container horizontally and add vertical margin */
+  padding: 30px; /* Add spacing inside the container */
+  background-color: #fff; /* White background */
+}
+
+/* Breadcrumb navigation styling */
+.breadcrumb {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #666; /* Light gray color */
+  margin-bottom: 30px; /* Space below the breadcrumb */
+  padding-bottom: 15px; /* Additional spacing */
+  border-bottom: 1px solid #eee; /* Subtle border */
+}
+
+.breadcrumb a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Main container for product details */
+.product-container {
+  display: flex; /* Use flexbox for layout */
+  gap: 40px; /* Add space between child elements */
+  align-items: flex-start; /* Align items at the top */
+}
+
+/* Product image container - scoped to product-detail page */
+.product-detail .product-image {
+  flex: 1; /* Take up 1 part of the available space */
+  text-align: center; /* Center the image horizontally */
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Padding around image */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-detail .product-image img {
+  width: 100%; /* Full width of container */
+  max-width: 500px; /* Maximum width for the image */
+  height: 500px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #e0e0e0; /* Light border */
+}
+
+/* Product information container */
+.product-info {
+  flex: 1.5; /* Take up 1.5 parts of the available space */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 25px; /* Space between elements */
+}
+
+.product-info h2 {
+  font-size: 0.9rem; /* Smaller font for secondary headings */
+  color: #888; /* Light gray color */
+  text-transform: uppercase; /* Uppercase brand name */
+  letter-spacing: 1px; /* Letter spacing */
+  margin: 0; /* Remove default margin */
+  font-weight: 500; /* Medium weight */
+}
+
+.product-info h1 {
+  font-size: 2rem; /* Reduced font for main heading */
+  margin: 0; /* Remove default margin */
+  color: #000; /* Black text color */
+  font-weight: 700; /* Bold weight */
+  line-height: 1.2; /* Tight line height */
+}
+
+/* Pricing and description styles */
+.price {
+  font-size: 1.6rem; /* Reduced font size for emphasis */
+  color: #000; /* Black color for price */
+  font-weight: 700; /* Bold weight */
+  margin: 10px 0; /* Vertical margin */
+}
+
+.description {
+  font-size: 0.9rem; /* Reduced font size for readability */
+  color: #555; /* Medium gray color */
+  line-height: 1.7; /* Improve readability with line spacing */
+  margin: 0; /* Remove default margin */
+}
+
+/* Size selection styling */
+.size-options {
+  margin-top: 10px; /* Space above size options */
+}
+
+.size-options p {
+  font-weight: 600; /* Bold label */
+  font-size: 0.9rem; /* Reduced font size */
+  margin-bottom: 12px; /* Space below label */
+  color: #333; /* Dark color */
+}
+
+.size-buttons {
+  display: flex; /* Use flexbox for layout */
+  gap: 12px; /* Space between size buttons */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.size-buttons button {
+  min-width: 50px; /* Minimum width for buttons */
+  padding: 12px 20px; /* Add spacing inside buttons */
+  font-size: 0.9rem; /* Reduced font size */
+  border: 2px solid #ddd; /* Border for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: white; /* White background */
+  transition: all 0.2s ease; /* Smooth transitions */
+  color: #000; /* Black text */
+  border-radius: 6px; /* Rounded corners */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Styling for selected size button */
+.size-buttons .selected {
+  border-color: #000; /* Black border for selected state */
+  background-color: #000; /* Black background */
+  color: white; /* White text */
+}
+
+/* Hover effect for size buttons */
+.size-buttons button:hover:not(.selected) {
+  background-color: #f5f5f5; /* Light background on hover */
+  border-color: #999; /* Darker border on hover */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Quantity selector styling */
+.quantity-selector {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack label and controls vertically */
+  gap: 12px; /* Space between label and controls */
+  margin: 20px 0; /* Vertical margin */
+}
+
+.quantity-selector p {
+  font-weight: 600; /* Bold label */
+  font-size: 0.9rem; /* Reduced font size */
+  margin: 0; /* Remove default margin */
+  color: #333; /* Dark color */
+}
+
+.quantity-controls {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 15px; /* Space between buttons and quantity */
+}
+
+.quantity-controls button {
+  width: 40px; /* Fixed width for buttons */
+  height: 40px; /* Fixed height for buttons */
+  padding: 0; /* Remove padding */
+  font-size: 1.2rem; /* Reduced font size */
+  border: 2px solid #ddd; /* Border for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: white; /* White background */
+  transition: all 0.2s ease; /* Smooth transitions */
+  color: #000; /* Black text */
+  border-radius: 6px; /* Rounded corners */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-weight: 600; /* Bold font */
+}
+
+/* Hover effect for quantity buttons */
+.quantity-controls button:hover {
+  background-color: #f5f5f5; /* Light background on hover */
+  border-color: #999; /* Darker border on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.quantity-controls button:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+/* Styling for the quantity text */
+.quantity-controls span {
+  font-size: 1.1rem; /* Reduced font size */
+  font-weight: 600; /* Semi-bold font */
+  color: #000; /* Black text */
+  min-width: 30px; /* Minimum width */
+  text-align: center; /* Center text */
+}
+
+/* Total price styling */
+.total-price {
+  font-size: 1.3rem; /* Reduced font size */
+  font-weight: 700; /* Bold font */
+  color: #000; /* Black color */
+  margin: 15px 0; /* Vertical margin */
+  padding: 15px 0; /* Vertical padding */
+  border-top: 1px solid #eee; /* Top border */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+/* Add to cart button styling */
+.add-to-cart {
+  width: 100%; /* Full width */
+  max-width: 400px; /* Maximum width */
+  padding: 16px 32px; /* Add spacing inside the button */
+  font-size: 1rem; /* Reduced font size */
+  font-weight: 600; /* Semi-bold */
+  color: white; /* White text color */
+  background-color: #000; /* Black background */
+  border: 2px solid #000; /* Black border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transitions */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing */
+  margin-top: 20px; /* Top margin */
+}
+
+/* Hover effect for add to cart button */
+.add-to-cart:hover {
+  background-color: #333; /* Darker background */
+  border-color: #333; /* Darker border */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Active effect for add to cart button */
+.add-to-cart:active {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+  .product-container {
+    flex-direction: column; /* Stack image and info vertically */
+    gap: 30px; /* Reduce gap */
+  }
+  
+  .product-detail .product-image img {
+    max-width: 100%; /* Full width */
+    height: 400px; /* Smaller fixed height for tablets */
+  }
+  
+  .product-info h1 {
+    font-size: 1.7rem; /* Reduced heading */
+  }
+  
+  .price {
+    font-size: 1.4rem; /* Reduced price */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    padding: 20px; /* Reduce padding on mobile */
+    margin: 10px auto;
+  }
+  
+  .product-detail .product-image {
+    padding: 15px; /* Reduce padding */
+  }
+  
+  .product-detail .product-image img {
+    height: 350px; /* Smaller fixed height for mobile */
+  }
+  
+  .product-info h1 {
+    font-size: 1.5rem; /* Reduced heading on mobile */
+  }
+  
+  .price {
+    font-size: 1.3rem; /* Reduced price on mobile */
+  }
+  
+  .add-to-cart {
+    max-width: 100%; /* Full width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail .product-image img {
+    height: 300px; /* Even smaller for very small screens */
+  }
+  
+  .product-info h1 {
+    font-size: 1.3rem; /* Reduced heading */
+  }
+  
+  .size-buttons button {
+    min-width: 45px; /* Smaller buttons */
+    padding: 10px 15px; /* Less padding */
+  }
+}

@@ -1,0 +1,356 @@
+/* Main container for the cart page */
+.cart-page {
+  max-width: 1000px; /* Increased width for better layout */
+  margin: 30px auto; /* Center the container horizontally */
+  padding: 30px; /* Add spacing inside the container */
+  background-color: #fff; /* White background */
+}
+
+/* Heading for the cart page */
+.cart-page h2 {
+  text-align: left; /* Left align the heading */
+  font-size: 2rem; /* Larger font size */
+  font-weight: 700; /* Bold weight */
+  margin-bottom: 30px; /* Add spacing below the heading */
+  color: #000; /* Black color */
+  padding-bottom: 15px; /* Padding below */
+  border-bottom: 1px solid #eee; /* Subtle border */
+}
+
+/* Styling for the cart table */
+.cart-table {
+  width: 100%; /* Make the table span the full width of the container */
+  border-collapse: collapse; /* Remove space between table borders */
+  margin-top: 20px; /* Add spacing above the table */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Table header styling */
+.cart-table thead {
+  background-color: #f9f9f9; /* Light background for header */
+}
+
+.cart-table th {
+  padding: 15px; /* Add padding inside table header cells */
+  text-align: left; /* Left align header text */
+  font-weight: 600; /* Semi-bold */
+  font-size: 0.9rem; /* Standard font size */
+  color: #333; /* Dark color */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Letter spacing */
+  border-bottom: 2px solid #eee; /* Bottom border */
+}
+
+/* Table cell styling */
+.cart-table td {
+  padding: 20px 15px; /* Add padding inside table cells */
+  text-align: left; /* Left align text */
+  border-bottom: 1px solid #eee; /* Bottom border for rows */
+  vertical-align: middle; /* Center vertically */
+}
+
+.cart-table tbody tr:hover {
+  background-color: #fafafa; /* Light background on hover */
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+.cart-table tbody tr:last-child td {
+  border-bottom: none; /* Remove border from last row */
+}
+
+/* Container for item details */
+.item-info {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 15px; /* Add spacing between the image and text */
+}
+
+/* Styling for product images in the cart */
+.cart-image {
+  width: 80px; /* Set fixed width for the image */
+  height: 80px; /* Set fixed height for the image */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #e0e0e0; /* Light border */
+  background-color: #f5f5f5; /* Light background */
+}
+
+/* Item name styling */
+.item-name {
+  font-weight: 500; /* Medium weight */
+  font-size: 0.95rem; /* Standard font size */
+  color: #000; /* Black color */
+}
+
+/* Item price styling */
+.item-price {
+  font-weight: 600; /* Semi-bold */
+  font-size: 1rem; /* Standard font size */
+  color: #333; /* Dark color */
+}
+
+/* Item subtotal styling */
+.item-subtotal {
+  font-weight: 700; /* Bold */
+  font-size: 1.1rem; /* Slightly larger */
+  color: #000; /* Black color */
+}
+
+/* Quantity control section */
+.quantity-controls {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align buttons and text vertically */
+  gap: 12px; /* Add spacing between buttons and text */
+  justify-content: center; /* Center the controls */
+}
+
+/* Quantity buttons */
+.quantity-btn {
+  width: 35px; /* Fixed width */
+  height: 35px; /* Fixed height */
+  padding: 0; /* Remove padding */
+  font-size: 1.2rem; /* Font size */
+  border: 2px solid #ddd; /* Border */
+  cursor: pointer; /* Pointer cursor */
+  background-color: white; /* White background */
+  transition: all 0.2s ease; /* Smooth transitions */
+  color: #000; /* Black text */
+  border-radius: 6px; /* Rounded corners */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-weight: 600; /* Bold font */
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background-color: #f5f5f5; /* Light background on hover */
+  border-color: #999; /* Darker border on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.quantity-btn:active:not(:disabled) {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5; /* Reduce opacity when disabled */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Quantity value */
+.quantity-value {
+  font-size: 1.1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  color: #000; /* Black text */
+  min-width: 30px; /* Minimum width */
+  text-align: center; /* Center text */
+}
+
+/* Styling for the remove button */
+.remove-button {
+  font-size: 0.9rem; /* Font size */
+  color: #666; /* Gray color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border: 1px solid #ddd; /* Light border */
+  background-color: white; /* White background */
+  padding: 8px 16px; /* Padding */
+  border-radius: 6px; /* Rounded corners */
+  transition: all 0.2s ease; /* Smooth transitions */
+  font-weight: 500; /* Medium weight */
+}
+
+.remove-button:hover:not(:disabled) {
+  background-color: #f5f5f5; /* Light background on hover */
+  border-color: #999; /* Darker border on hover */
+  color: #000; /* Black text on hover */
+}
+
+.remove-button:disabled {
+  opacity: 0.5; /* Reduce opacity when disabled */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Total price section */
+.cart-total {
+  margin-top: 30px; /* Add spacing above the total price */
+  padding-top: 20px; /* Top padding */
+  border-top: 2px solid #eee; /* Top border */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space between total and button */
+  align-items: center; /* Align vertically */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 20px; /* Gap between elements */
+}
+
+.cart-total h3 {
+  font-size: 1.5rem; /* Font size */
+  font-weight: 700; /* Bold */
+  color: #000; /* Black color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Checkout button styling */
+.checkout-button {
+  padding: 16px 32px; /* Add padding inside the button */
+  background-color: #000; /* Black background */
+  color: white; /* White text for contrast */
+  border: 2px solid #000; /* Black border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  border-radius: 8px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing */
+  transition: all 0.3s ease; /* Smooth transitions */
+  margin: 0; /* Remove margin */
+}
+
+.checkout-button:hover:not(:disabled) {
+  background-color: #333; /* Darker background */
+  border-color: #333; /* Darker border */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.checkout-button:active:not(:disabled) {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+
+.checkout-button:disabled {
+  opacity: 0.5; /* Reduce opacity when disabled */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Styling for the empty cart section */
+.empty-cart {
+  text-align: center; /* Center align the text */
+  margin-top: 60px; /* Add spacing above the empty cart message */
+  padding: 40px 20px; /* Padding */
+}
+
+/* Styling for the empty cart message text */
+.empty-cart p {
+  font-size: 1.2rem; /* Font size */
+  color: #666; /* Gray color for the text */
+  margin-bottom: 30px; /* Bottom margin */
+}
+
+/* Styling for the shop now button */
+.shop-now-button {
+  padding: 16px 32px; /* Add padding inside the button */
+  background-color: #000; /* Black background */
+  color: white; /* White text for contrast */
+  border: 2px solid #000; /* Black border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  border-radius: 8px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing */
+  transition: all 0.3s ease; /* Smooth transitions */
+  margin: 0; /* Remove margin */
+}
+
+.shop-now-button:hover {
+  background-color: #333; /* Darker background */
+  border-color: #333; /* Darker border */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.shop-now-button:active {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 20px; /* Reduce padding on mobile */
+    margin: 10px auto;
+  }
+  
+  .cart-page h2 {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+  }
+  
+  /* Make table more mobile-friendly */
+  .cart-table {
+    font-size: 0.9rem; /* Smaller font on mobile */
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 12px 8px; /* Reduce padding on mobile */
+  }
+  
+  .cart-table th {
+    font-size: 0.8rem; /* Smaller header font */
+  }
+  
+  .cart-image {
+    width: 60px; /* Smaller image on mobile */
+    height: 60px;
+  }
+  
+  .item-name {
+    font-size: 0.9rem; /* Smaller font */
+  }
+  
+  .cart-total {
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: stretch; /* Stretch items */
+  }
+  
+  .cart-total h3 {
+    font-size: 1.3rem; /* Smaller total */
+    text-align: center; /* Center align */
+  }
+  
+  .checkout-button,
+  .shop-now-button {
+    width: 100%; /* Full width buttons on mobile */
+  }
+  
+  .quantity-btn {
+    width: 32px; /* Slightly smaller buttons */
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-page {
+    padding: 15px; /* Further reduce padding */
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 10px 5px; /* Even smaller padding */
+    font-size: 0.85rem;
+  }
+  
+  .cart-image {
+    width: 50px; /* Even smaller image */
+    height: 50px;
+  }
+  
+  .item-info {
+    gap: 10px; /* Reduce gap */
+  }
+  
+  .quantity-btn {
+    width: 28px; /* Smaller buttons */
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  
+  .remove-button {
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 0.85rem;
+  }
+}

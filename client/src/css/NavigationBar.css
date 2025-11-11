@@ -1,0 +1,245 @@
+/* Navbar container */
+.navbar {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and navigation items */
+  align-items: center; /* Align items vertically */
+  background-color: #000; /* Black background for consistency */
+  padding: 15px 30px; /* Add spacing inside the navbar */
+  color: white; /* White text color for readability */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to top */
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Logo styling */
+.navbar-logo a {
+  font-size: 1.6rem; /* Increase font size for emphasis */
+  font-weight: 700; /* Bold font for visibility */
+  color: white; /* White color for the logo text */
+  text-decoration: none; /* Remove underline from the logo link */
+  transition: opacity 0.2s ease; /* Smooth transition */
+  letter-spacing: -0.5px; /* Tighter letter spacing */
+}
+
+.navbar-logo a:hover {
+  opacity: 0.8; /* Slight opacity on hover */
+}
+
+/* Search container inside the navbar */
+.navbar-search {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align search bar and button vertically */
+  margin-right: 20px; /* Add spacing on the right */
+}
+
+/* Search input field styling */
+.search-input {
+  width: 300px; /* Increased width for better usability */
+  padding: 10px 15px; /* Add padding inside the input */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 0.95rem; /* Font size */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+  background-color: white; /* White background */
+  color: #000; /* Black text */
+}
+
+.search-input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #000; /* Black border on focus */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle shadow on focus */
+}
+
+/* Search button styling */
+.search-button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-left: 5px; /* Add spacing between button and input */
+  padding: 0 10px; /* Add horizontal padding for clickable area */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Remove blue color on hover and focus */
+.search-button:hover,
+.search-button:focus,
+.search-button:active {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+/* Search icon inside the search button */
+.search-button .fa-search {
+  color: white; /* White color for the search icon */
+  font-size: 1rem; /* Icon size */
+  transition: color 0.2s ease; /* Smooth transition */
+}
+
+/* Keep icon color consistent on hover */
+.search-button:hover .fa-search,
+.search-button:focus .fa-search {
+  color: #ccc; /* Light gray color on hover/focus */
+}
+
+.search-button:active .fa-search {
+  color: #999; /* Gray on active */
+}
+
+/* Navbar links styling */
+.navbar-links a {
+  margin: 0 12px; /* Add spacing between links */
+  color: white; /* White text color for readability */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.95rem; /* Standard font size */
+  font-weight: 500; /* Medium weight */
+  transition: color 0.2s ease, opacity 0.2s ease; /* Smooth transitions */
+  position: relative; /* Position for underline effect */
+  padding: 5px 0; /* Vertical padding */
+}
+
+.navbar-links a::after {
+  content: ''; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Bottom position */
+  left: 0; /* Left position */
+  width: 0; /* Start with no width */
+  height: 2px; /* Height of underline */
+  background-color: white; /* White underline */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.navbar-links a:hover {
+  opacity: 0.9; /* Slight opacity change */
+}
+
+.navbar-links a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align links vertically */
+}
+
+/* Menu toggle button for mobile view */
+.menu-toggle {
+  display: none; /* Hidden by default for larger screens */
+  background: none; /* Transparent background */
+  border: none; /* Remove border */
+  font-size: 1.8rem; /* Increase font size for visibility */
+  color: white; /* White color for the toggle icon */
+  cursor: pointer; /* Pointer cursor */
+  padding: 5px; /* Padding */
+  transition: opacity 0.2s ease; /* Smooth transition */
+}
+
+.menu-toggle:hover {
+  opacity: 0.8; /* Slight opacity on hover */
+}
+
+/* Welcome message styling */
+.navbar-links span {
+  margin: 0 12px; /* Spacing */
+  font-size: 0.9rem; /* Font size */
+  color: #ccc; /* Light gray color */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Logout button styling */
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: white;
+  color: #000;
+  border-color: white;
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Responsive design for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Show the menu toggle button in mobile view */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide the navbar links by default in mobile view */
+  .navbar-links {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Add spacing between links */
+    background-color: #000; /* Black background for the dropdown */
+    padding: 20px; /* Add spacing inside the dropdown */
+    position: absolute; /* Position the dropdown */
+    top: 100%; /* Place dropdown below the navbar */
+    right: 0; /* Align dropdown to the right */
+    left: 0; /* Full width */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+  }
+  
+  .navbar-links a {
+    margin: 0; /* Remove margin */
+    padding: 12px 0; /* Add padding */
+    border-bottom: 1px solid #333; /* Bottom border */
+  }
+  
+  .navbar-links a:last-child {
+    border-bottom: none; /* Remove border from last link */
+  }
+  
+  .navbar-links a::after {
+    display: none; /* Hide underline effect on mobile */
+  }
+  
+  .navbar-links span {
+    margin: 0; /* Remove margin */
+    padding: 12px 0; /* Add padding */
+    border-bottom: 1px solid #333; /* Bottom border */
+  }
+  
+  .logout-button {
+    width: 100%; /* Full width */
+    margin: 10px 0 0 0; /* Margin */
+    text-align: center; /* Center text */
+  }
+
+  /* Show the navbar links when the menu is toggled */
+  .navbar-links.open {
+    display: flex; /* Display links when the menu is open */
+  }
+  
+  /* Adjust search input for mobile */
+  .search-input {
+    width: 100%; /* Full width on mobile */
+    max-width: 100%; /* Ensure it doesn't overflow */
+  }
+  
+  .navbar-search {
+    margin-right: 0; /* Remove margin on mobile */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+  
+  .navbar {
+    padding: 12px 20px; /* Reduce padding on mobile */
+  }
+  
+  .navbar-logo a {
+    font-size: 1.4rem; /* Slightly smaller logo on mobile */
+  }
+}

@@ -1,0 +1,373 @@
+/* UserProfile page specific styles - body styles should be in index.css */
+
+/* Container for the user profile layout */
+.user-profile {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Sidebar section of the profile */
+.profile-sidebar {
+  width: 300px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+/* Header section within the sidebar */
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Avatar circle */
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 auto 15px;
+  border: 3px solid #f0f0f0;
+}
+
+/* Styling for the profile name in the header */
+.profile-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+/* Personal information section in the sidebar */
+.personal-info {
+  margin-top: 20px;
+}
+
+.personal-info h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Info item styling */
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Main content area of the profile */
+.profile-content {
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header for the main content area */
+.profile-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Individual order card within the main content area */
+.order-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Order header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.order-header-left {
+  flex: 1;
+}
+
+.order-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+.order-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.order-header-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+/* Order status badge */
+.order-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.order-status-ordered {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.order-status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.order-status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.order-total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+/* Order products container */
+.order-products {
+  margin-bottom: 20px;
+}
+
+.order-product-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-product-item:last-child {
+  border-bottom: none;
+}
+
+.order-product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+}
+
+.order-product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-product-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #000;
+  margin: 0;
+}
+
+.order-product-quantity {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.order-product-price {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  margin: 0;
+}
+
+/* Order shipping section */
+.order-shipping {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.order-shipping h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shipping-address {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* No orders message */
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-orders p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.no-orders-subtitle {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+/* Error message */
+.error-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #d32f2f;
+  font-size: 1.1rem;
+}
+
+/* Loading message */
+.loading-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+  .user-profile {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .profile-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-profile {
+    padding: 10px;
+    margin: 10px auto;
+  }
+  
+  .profile-sidebar,
+  .profile-content {
+    padding: 20px;
+  }
+  
+  .profile-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .order-header {
+    flex-direction: column;
+  }
+  
+  .order-header-right {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .order-card {
+    padding: 20px;
+  }
+  
+  .order-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-sidebar,
+  .profile-content {
+    padding: 15px;
+  }
+  
+  .order-card {
+    padding: 15px;
+  }
+  
+  .order-product-item {
+    gap: 10px;
+  }
+  
+  .order-product-image {
+    width: 50px;
+    height: 50px;
+  }
+}

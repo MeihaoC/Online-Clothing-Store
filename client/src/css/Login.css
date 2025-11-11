@@ -1,0 +1,288 @@
+/* Login page specific styles - body styles should be in index.css */
+
+.login-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 300px);
+}
+
+.forms-container {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Form Box */
+.form-box {
+  flex: 1;
+  max-width: 480px;
+  border: 1px solid #e0e0e0;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #000;
+  text-transform: none;
+  letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-box label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-box input:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-box input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-box input::placeholder {
+  color: #999;
+}
+  
+  /* Form Options */
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-options label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-options a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #007bff;
+  }
+  
+  .form-options a:hover {
+    text-decoration: underline;
+  }
+  
+/* Error and Success Messages */
+.error-message {
+  background-color: transparent;
+  border-left: 2px solid #d32f2f;
+  color: #d32f2f;
+  padding: 8px 12px;
+  border-radius: 0;
+  margin: -10px 0 15px 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: transparent;
+  border-left: 2px solid #2e7d32;
+  color: #2e7d32;
+  padding: 8px 12px;
+  border-radius: 0;
+  margin: -10px 0 15px 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  line-height: normal;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #333;
+  border-color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background-color: #999;
+  border-color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+  
+  /* Social Login */
+  .social-login {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-login p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .social-btn.facebook {
+    background-color: #3b5998;
+  }
+  
+  .social-btn.google {
+    background-color: #db4a39;
+  }
+  
+  .social-btn.facebook:hover {
+    background-color: #2d4373;
+  }
+  
+  .social-btn.google:hover {
+    background-color: #c23321;
+  }
+  
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+  .forms-container {
+    gap: 40px;
+  }
+  
+  .form-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .forms-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .form-box {
+    max-width: 100%;
+    padding: 30px 25px;
+  }
+  
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 15px 10px;
+    margin: 15px auto;
+  }
+  
+  .form-box {
+    padding: 25px 20px;
+  }
+  
+  .form-box h2 {
+    font-size: 1.3rem;
+  }
+  
+  .btn-primary {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
+  

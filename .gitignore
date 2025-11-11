@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Note: package-lock.json should be committed for consistency
+# yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Note: .env.example should be committed as a template
+
+# Build outputs
+client/build/
+client/dist/
+server/dist/
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+.nyc_output/
+*.test.js.snap
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# MongoDB
+*.db
+*.sqlite
+*.sqlite3
+
+# Misc
+*.pdf
+*.mp4
+*.mov
+*.avi
+

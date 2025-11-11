@@ -1,0 +1,420 @@
+/* HomePage specific styles - body styles should be in index.css */
+
+/* Main container for the homepage */
+.homepage {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: calc(100vh - 200px); /* Minimum height */
+}
+
+/* Main content area including sidebar and products */
+.homepage-content {
+  display: flex; /* Use flexbox for layout */
+  padding: 30px; /* Add spacing inside the container */
+  background-color: #fff; /* White background */
+  max-width: 1400px; /* Maximum width */
+  margin: 0 auto; /* Center */
+  gap: 30px; /* Gap between sidebar and products */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  min-width: 250px; /* Prevent shrinking */
+  max-width: 250px; /* Prevent expanding */
+  flex-shrink: 0; /* Prevent flexbox from shrinking the sidebar */
+  padding: 25px; /* Add spacing inside the sidebar */
+  background-color: #fff; /* White background for the sidebar */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  height: fit-content; /* Fit content height */
+  position: sticky; /* Sticky positioning */
+  top: 100px; /* Stick below navbar */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.sidebar-title {
+  font-size: 1.3rem; /* Font size */
+  font-weight: 700; /* Bold */
+  margin: 0 0 25px 0; /* Margin */
+  color: #000; /* Black color */
+  padding-bottom: 15px; /* Padding bottom */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+/* Styling for filter groups in the sidebar */
+.filter-group {
+  margin-bottom: 30px; /* Add spacing below each filter group */
+}
+
+.filter-title {
+  font-size: 0.95rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  margin: 0 0 15px 0; /* Margin */
+  color: #333; /* Dark gray */
+  text-transform: uppercase; /* Uppercase */
+  letter-spacing: 0.5px; /* Letter spacing */
+}
+
+.filter-list {
+  list-style: none; /* Remove list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.filter-item {
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+.filter-label {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align vertically */
+  cursor: pointer; /* Pointer cursor */
+  transition: color 0.2s ease; /* Smooth transition */
+}
+
+.filter-label:hover {
+  color: #000; /* Black on hover */
+}
+
+.filter-checkbox {
+  width: 18px; /* Checkbox width */
+  height: 18px; /* Checkbox height */
+  margin-right: 10px; /* Right margin */
+  cursor: pointer; /* Pointer cursor */
+  accent-color: #000; /* Black accent color */
+}
+
+.filter-text {
+  font-size: 0.95rem; /* Font size */
+  color: #333; /* Dark gray */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Product list container */
+.products {
+  flex: 1; /* Products section takes up remaining space */
+  min-width: 0; /* Prevent overflow */
+}
+
+/* Header for the products section */
+.products-header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out children horizontally */
+  align-items: center; /* Align children vertically */
+  margin-bottom: 20px; /* Add spacing below the header */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 15px; /* Gap between elements */
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align vertically */
+  gap: 8px; /* Gap between items */
+  font-size: 0.9rem; /* Font size */
+  color: #666; /* Gray color */
+}
+
+.breadcrumb-separator {
+  color: #999; /* Lighter gray */
+}
+
+.breadcrumb-search {
+  color: #000; /* Black for search term */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Sort by styling */
+.sort-by {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Gap between label and select */
+}
+
+.sort-label {
+  font-size: 0.95rem; /* Font size */
+  font-weight: 500; /* Medium weight */
+  color: #333; /* Dark gray */
+}
+
+.sort-select {
+  padding: 8px 12px; /* Padding */
+  border: 1px solid #ddd; /* Border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 0.95rem; /* Font size */
+  background-color: white; /* White background */
+  color: #000; /* Black text */
+  cursor: pointer; /* Pointer cursor */
+  transition: border-color 0.2s ease; /* Smooth transition */
+  font-family: inherit; /* Inherit font */
+}
+
+.sort-select:focus {
+  outline: none; /* Remove outline */
+  border-color: #000; /* Black border on focus */
+}
+
+/* Results count */
+.results-count {
+  font-size: 0.9rem; /* Font size */
+  color: #666; /* Gray color */
+  margin-bottom: 20px; /* Bottom margin */
+  padding-bottom: 15px; /* Bottom padding */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+/* Grid layout for products */
+.products-grid {
+  display: grid; /* Use CSS grid for product layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 30px; /* Space between grid items */
+}
+
+/* Individual product card styling */
+.product-card {
+  background-color: white; /* White background for the card */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Left align text */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  height: 100%; /* Ensure all cards have the same height */
+  text-decoration: none; /* Remove link underline */
+  color: inherit; /* Inherit text color */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.product-card:hover {
+  transform: translateY(-4px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+  border-color: #000; /* Black border on hover */
+}
+
+/* Product image container */
+.product-card .product-image {
+  width: 100%; /* Full width of card */
+  height: 300px; /* Fixed height for all images */
+  overflow: hidden; /* Hide overflow */
+  margin-bottom: 0; /* No margin */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: #f9f9f9; /* Light background for loading/empty states */
+  position: relative; /* Position relative */
+}
+
+/* Image styling for product cards */
+.product-card img {
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.product-card:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Product info container */
+.product-info {
+  padding: 20px; /* Padding */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 8px; /* Gap between elements */
+}
+
+/* Product name styling */
+.product-name {
+  margin: 0; /* Remove margin */
+  font-size: 1rem; /* Consistent font size */
+  font-weight: 600; /* Semi-bold */
+  min-height: 2.5em; /* Minimum height for consistent spacing */
+  display: -webkit-box; /* Enable line clamping */
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  line-clamp: 2; /* Standard property for line clamping */
+  -webkit-box-orient: vertical; /* Vertical orientation */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  color: #000; /* Black color */
+  line-height: 1.4; /* Line height */
+}
+
+/* Product price styling */
+.product-price {
+  margin: 0; /* Remove margin */
+  font-size: 1.2rem; /* Font size */
+  font-weight: 700; /* Bold */
+  color: #000; /* Black color */
+}
+
+/* Loading state */
+.loading-state,
+.error-state {
+  grid-column: 1 / -1; /* Span all columns */
+  text-align: center; /* Center align */
+  padding: 60px 20px; /* Padding */
+  color: #666; /* Gray color */
+  font-size: 1.1rem; /* Font size */
+}
+
+.error-state {
+  color: #d32f2f; /* Red color for errors */
+}
+
+/* Empty state */
+.empty-state {
+  grid-column: 1 / -1; /* Span all columns */
+  text-align: center; /* Center align */
+  padding: 80px 20px; /* Padding */
+}
+
+.empty-state-title {
+  font-size: 1.5rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  color: #000; /* Black color */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+.empty-state-subtitle {
+  font-size: 1rem; /* Font size */
+  color: #666; /* Gray color */
+  line-height: 1.6; /* Line height */
+}
+
+/* Pagination container */
+.pagination {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center pagination buttons */
+  margin: 20px 0; /* Add vertical spacing above and below */
+}
+
+/* Styling for pagination buttons */
+.pagination button {
+  margin: 0 5px; /* Add spacing between buttons */
+  padding: 5px 10px; /* Add padding inside the buttons */
+  border: 1px solid #ddd; /* Light gray border */
+  background-color: white; /* White background */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Active pagination button styling */
+.pagination .active {
+  background-color: #333; /* Dark background for active button */
+  color: white; /* White text for contrast */
+  border-color: #333; /* Dark border color for consistency */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    gap: 25px;
+  }
+  
+  .product-card .product-image {
+    height: 280px; /* Slightly smaller height for medium screens */
+  }
+  
+  .homepage-content {
+    padding: 25px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    gap: 20px;
+  }
+  
+  .product-card .product-image {
+    height: 250px; /* Smaller height for tablets */
+  }
+  
+  .homepage-content {
+    flex-direction: column; /* Stack sidebar and products vertically */
+    padding: 20px; /* Reduce padding */
+  }
+  
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    min-width: 100%; /* Override min-width for mobile */
+    max-width: 100%; /* Override max-width for mobile */
+    flex-shrink: 1; /* Allow shrinking on mobile */
+    position: static; /* Remove sticky */
+    border: 1px solid #e0e0e0; /* Border */
+    border-radius: 12px; /* Rounded corners */
+  }
+  
+  .products-header {
+    flex-direction: column; /* Stack vertically */
+    align-items: flex-start; /* Align left */
+  }
+  
+  .sort-by {
+    width: 100%; /* Full width */
+    justify-content: space-between; /* Space between */
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-content {
+    padding: 15px; /* Reduce padding on mobile */
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 15px;
+  }
+  
+  .product-card .product-image {
+    height: 220px; /* Smaller height for mobile */
+  }
+  
+  .sidebar {
+    padding: 20px; /* Reduce padding */
+  }
+  
+  .product-info {
+    padding: 15px; /* Reduce padding */
+  }
+  
+  .product-name {
+    font-size: 0.95rem; /* Smaller font */
+  }
+  
+  .product-price {
+    font-size: 1.1rem; /* Smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-content {
+    padding: 10px; /* Minimal padding */
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    gap: 20px;
+  }
+  
+  .product-card .product-image {
+    height: 300px; /* Larger height for single column view */
+  }
+  
+  .sidebar {
+    padding: 15px; /* Reduce padding */
+  }
+  
+  .sidebar-title {
+    font-size: 1.1rem; /* Smaller title */
+  }
+  
+  .filter-title {
+    font-size: 0.9rem; /* Smaller filter title */
+  }
+}

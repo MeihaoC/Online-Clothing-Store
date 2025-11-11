@@ -1,0 +1,302 @@
+/* Main container for the checkout page */
+.checkout-page {
+  max-width: 1200px; /* Increased width for better layout */
+  margin: 30px auto; /* Center the container horizontally */
+  padding: 30px; /* Add padding */
+  background-color: #fff; /* White background */
+}
+
+/* Heading for checkout page */
+.checkout-page h2 {
+  font-size: 2rem; /* Larger font size */
+  font-weight: 700; /* Bold weight */
+  margin-bottom: 30px; /* Add spacing below the heading */
+  color: #000; /* Black color */
+  padding-bottom: 15px; /* Padding below */
+  border-bottom: 1px solid #eee; /* Subtle border */
+}
+
+/* Layout for the checkout form */
+.checkout-form {
+  display: flex; /* Use flexbox for layout */
+  gap: 40px; /* Add space between child elements */
+  align-items: flex-start; /* Align items at the top */
+}
+
+/* Shipping form container */
+.shipping-form-container {
+  flex: 1.2; /* Take up more space */
+}
+
+.shipping-form-container h3 {
+  font-size: 1.3rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px; /* Spacing below */
+  color: #000; /* Black color */
+}
+
+/* Styling for the form within the checkout */
+.shipping-form {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 20px; /* Add spacing between form fields */
+}
+
+/* Form label styling */
+.shipping-form label {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack label and input */
+  gap: 8px; /* Gap between label and input */
+  font-weight: 500; /* Medium weight */
+  font-size: 0.9rem; /* Font size */
+  color: #333; /* Dark color */
+}
+
+/* Form input styling */
+.shipping-form input {
+  padding: 12px; /* Padding inside input */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  font-family: inherit; /* Inherit font family */
+  transition: border-color 0.2s ease; /* Smooth transition */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.shipping-form input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #000; /* Black border on focus */
+}
+
+/* Styling for the order summary box */
+.order-summary {
+  flex: 1; /* Take up remaining space */
+  padding: 25px; /* Add padding inside the summary box */
+  background: #f9f9f9; /* Light background color for contrast */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  position: sticky; /* Sticky positioning */
+  top: 20px; /* Distance from top */
+}
+
+/* Header in the order summary */
+.order-summary h3 {
+  font-size: 1.3rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px; /* Add spacing below the header */
+  color: #000; /* Black color */
+  padding-bottom: 15px; /* Padding below */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+/* Order items container */
+.order-items {
+  margin-bottom: 20px; /* Spacing below */
+  max-height: 400px; /* Maximum height */
+  overflow-y: auto; /* Scroll if needed */
+}
+
+/* Individual order item */
+.order-item {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align vertically */
+  gap: 12px; /* Gap between elements */
+  padding: 15px 0; /* Vertical padding */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+.order-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+/* Order item image */
+.order-item-image {
+  width: 60px; /* Fixed width */
+  height: 60px; /* Fixed height */
+  object-fit: cover; /* Cover container */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #e0e0e0; /* Light border */
+  background-color: #f5f5f5; /* Light background */
+}
+
+/* Order item details */
+.order-item-details {
+  flex: 1; /* Take up remaining space */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 4px; /* Small gap */
+}
+
+.order-item-name {
+  font-weight: 500; /* Medium weight */
+  font-size: 0.9rem; /* Font size */
+  color: #000; /* Black color */
+  margin: 0; /* Remove margin */
+}
+
+.order-item-price {
+  font-size: 0.85rem; /* Smaller font */
+  color: #666; /* Gray color */
+  margin: 0; /* Remove margin */
+}
+
+/* Order item subtotal */
+.order-item-subtotal {
+  font-weight: 600; /* Semi-bold */
+  font-size: 0.95rem; /* Font size */
+  color: #000; /* Black color */
+  margin: 0; /* Remove margin */
+}
+
+/* Order totals section */
+.order-totals {
+  margin-top: 20px; /* Top margin */
+  padding-top: 20px; /* Top padding */
+  border-top: 2px solid #eee; /* Top border */
+}
+
+/* Currency selector */
+.currency-selector {
+  margin-bottom: 15px; /* Bottom margin */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  gap: 8px; /* Gap between label and select */
+}
+
+.currency-selector label {
+  font-weight: 500; /* Medium weight */
+  font-size: 0.9rem; /* Font size */
+  color: #333; /* Dark color */
+}
+
+.currency-select {
+  padding: 10px; /* Padding */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  font-family: inherit; /* Inherit font family */
+  background-color: white; /* White background */
+  cursor: pointer; /* Pointer cursor */
+  transition: border-color 0.2s ease; /* Smooth transition */
+}
+
+.currency-select:focus {
+  outline: none; /* Remove default outline */
+  border-color: #000; /* Black border on focus */
+}
+
+/* Order total */
+.order-total {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space between */
+  align-items: center; /* Align vertically */
+  padding: 15px 0; /* Vertical padding */
+  border-top: 1px solid #eee; /* Top border */
+  border-bottom: 1px solid #eee; /* Bottom border */
+}
+
+.total-label {
+  font-size: 1.1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  color: #333; /* Dark color */
+}
+
+.total-amount {
+  font-size: 1.5rem; /* Larger font */
+  font-weight: 700; /* Bold */
+  color: #000; /* Black color */
+}
+
+/* Place order button */
+.place-order-button {
+  width: 100%; /* Full width */
+  padding: 16px 32px; /* Add padding inside the button */
+  background-color: #000; /* Black background */
+  color: white; /* White text color */
+  border: 2px solid #000; /* Black border */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Semi-bold */
+  border-radius: 8px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing */
+  transition: all 0.3s ease; /* Smooth transitions */
+  margin-top: 20px; /* Top margin */
+}
+
+.place-order-button:hover {
+  background-color: #333; /* Darker background */
+  border-color: #333; /* Darker border */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.place-order-button:active {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+  .checkout-form {
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Reduce gap */
+  }
+  
+  .order-summary {
+    position: static; /* Remove sticky positioning */
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 20px; /* Reduce padding */
+    margin: 10px auto;
+  }
+  
+  .checkout-page h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+  
+  .shipping-form-container h3,
+  .order-summary h3 {
+    font-size: 1.1rem; /* Smaller headings */
+  }
+  
+  .shipping-form {
+    gap: 15px; /* Reduce gap */
+  }
+  
+  .order-item-image {
+    width: 50px; /* Smaller image */
+    height: 50px;
+  }
+  
+  .total-amount {
+    font-size: 1.3rem; /* Smaller total */
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-page {
+    padding: 15px; /* Further reduce padding */
+  }
+  
+  .order-summary {
+    padding: 20px; /* Reduce padding */
+  }
+  
+  .order-item {
+    padding: 12px 0; /* Reduce padding */
+  }
+  
+  .order-item-image {
+    width: 45px; /* Even smaller image */
+    height: 45px;
+  }
+  
+  .order-item-name {
+    font-size: 0.85rem; /* Smaller font */
+  }
+}
