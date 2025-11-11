@@ -54,7 +54,8 @@ const corsOptions = {
     const allowedOrigins = [
       'http://localhost:3000',           // React dev server
       'http://localhost:3001',           // Alternative dev port
-      process.env.FRONTEND_URL,          // Production frontend URL from env
+      'https://online-clothing-store-5610.netlify.app',  // Production frontend (Netlify)
+      process.env.FRONTEND_URL,          // Additional frontend URL from env (if different)
     ].filter(Boolean); // Remove undefined values
     
     // Allow if origin is in the allowed list

@@ -7,6 +7,12 @@ A full-stack MERN (MongoDB, Express, React, Node.js) web application for an onli
 ![React](https://img.shields.io/badge/React-18.3-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)
 
+## 🌐 Live Demo
+
+**🔗 [View Live Application](https://online-clothing-store-5610.netlify.app/)**
+
+Visit the deployed application on Netlify to explore all features.
+
 ---
 
 ## 📋 Table of Contents
@@ -18,6 +24,7 @@ A full-stack MERN (MongoDB, Express, React, Node.js) web application for an onli
 - [Running the Project](#-running-the-project)
 - [Environment Variables](#-environment-variables)
 - [Database Setup](#-database-setup)
+- [Deployment](#-deployment)
 - [API Endpoints](#-api-endpoints)
 - [Project Structure](#-project-structure)
 - [Technologies Used](#-technologies-used)
@@ -145,6 +152,7 @@ JWT_SECRET=your-super-secret-jwt-key-here
 ```env
 PORT=5002                    # Server port (defaults to 5002)
 NODE_ENV=development         # Environment mode (development/production)
+FRONTEND_URL=https://online-clothing-store-5610.netlify.app  # Frontend URL for CORS (production)
 ```
 
 ### Generating JWT Secret
@@ -188,6 +196,48 @@ This creates:
 - 50 sample products
 - 20 sample users (with hashed passwords)
 - 30 sample orders
+
+---
+
+## 🚀 Deployment
+
+### Backend Deployment (Render)
+
+1. **Create a new Web Service** on [Render](https://render.com)
+2. **Connect your repository** (GitHub/GitLab)
+3. **Configure the service**:
+   - **Root Directory**: `server`
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+4. **Add Environment Variables**:
+   - `MONGODB_URI`: Your MongoDB Atlas connection string
+   - `JWT_SECRET`: Your JWT secret key
+   - `NODE_ENV`: `production`
+   - `FRONTEND_URL`: `https://online-clothing-store-5610.netlify.app`
+5. **Deploy**: Render will automatically deploy your backend
+
+**Live Backend URL**: [https://online-clothing-store-o4yo.onrender.com](https://online-clothing-store-o4yo.onrender.com)
+
+### Frontend Deployment (Netlify)
+
+1. **Create a new site** on [Netlify](https://netlify.com)
+2. **Connect your repository** (GitHub/GitLab)
+3. **Configure build settings**:
+   - **Branch to deploy**: `main`
+   - **Base directory**: `client`
+   - **Build command**: `npm run build`
+   - **Publish directory**: `client/build`
+4. **Add Environment Variables**:
+   - `REACT_APP_API_BASE_URL`: `https://online-clothing-store-o4yo.onrender.com/api`
+5. **Deploy**: Netlify will automatically build and deploy your frontend
+
+**Live Frontend URL**: [https://online-clothing-store-5610.netlify.app/](https://online-clothing-store-5610.netlify.app/)
+
+### Important Notes
+
+- Ensure CORS is properly configured in the backend to allow requests from your frontend domain
+- Update environment variables in both Render and Netlify
+- The backend must be deployed and running before the frontend can make API calls
 
 ---
 
