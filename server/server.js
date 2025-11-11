@@ -45,7 +45,35 @@ app.use("/api/users/login", authLimiter);
 app.use("/api/users/register", authLimiter);
 
 // Middleware to enable CORS (allows cross-origin requests)
-app.use(cors());
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, Postman, or same-origin requests)
+    if (!origin) return callback(null, true);
+    
+    // List of allowed origins
+    const allowedOrigins = [
+      'http://localhost:3000',           // React dev server
+      'http://localhost:3001',           // Alternative dev port
+      process.env.FRONTEND_URL,          // Production frontend URL from env
+    ].filter(Boolean); // Remove undefined values
+    
+    // Allow if origin is in the allowed list
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      // In development, allow all origins for easier testing
+      if (process.env.NODE_ENV === 'development') {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    }
+  },
+  credentials: true, // Allow cookies/credentials to be sent
+  optionsSuccessStatus: 200, // Some legacy browsers (IE11) choke on 204
+};
+
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON request bodies
 app.use(express.json({ limit: "10mb" })); // Limit request body size

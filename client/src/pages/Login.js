@@ -44,7 +44,7 @@ const Login = ({ setLoggedInUser }) => {
     
     try {
       // Send registration data to the server
-      const response = await axios.post(`${config.API_BASE_URL}/users/register`, registerData);
+      const response = await axios.post(`${config.API_BASE_URL}/api/users/register`, registerData);
       
       // Check if registration was successful
       if (response.data.success) {
@@ -90,7 +90,7 @@ const Login = ({ setLoggedInUser }) => {
     
     try {
       // Send login data to the server and receive a response
-      const response = await axios.post(`${config.API_BASE_URL}/users/login`, loginData);
+      const response = await axios.post(`${config.API_BASE_URL}/api/users/login`, loginData);
       console.log("Login response:", response.data); // Log server response for debugging
 
       // Verify response format

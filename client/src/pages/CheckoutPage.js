@@ -61,7 +61,7 @@ const CheckoutPage = () => {
 
     try {
       // Get the cart data from the API
-      const response = await axios.get(`${config.API_BASE_URL}/users/cart`, {
+      const response = await axios.get(`${config.API_BASE_URL}/api/users/cart`, {
         headers: { Authorization: `Bearer ${token}` }, // Include auth token
       });
       // Handle new response format: { success: true, cart: [...] }
@@ -131,7 +131,7 @@ const CheckoutPage = () => {
     try {
       // Send checkout request to the server
       await axios.post(
-        `${config.API_BASE_URL}/users/cart/checkout`,
+        `${config.API_BASE_URL}/api/users/cart/checkout`,
         {
           shippingAddress: shippingInfo,
           currency: currency,

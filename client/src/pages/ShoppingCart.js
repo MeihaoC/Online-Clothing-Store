@@ -37,7 +37,7 @@ const ShoppingCart = () => {
 
     try {
       // Make a GET request to fetch the cart items
-      const response = await axios.get(`${config.API_BASE_URL}/users/cart`, {
+      const response = await axios.get(`${config.API_BASE_URL}/api/users/cart`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Handle new response format: { success: true, cart: [...] }
@@ -83,7 +83,7 @@ const ShoppingCart = () => {
       setIsUpdating(true);
       // Make a POST request to update the cart item quantity
       await axios.post(
-        `${config.API_BASE_URL}/users/cart`,
+        `${config.API_BASE_URL}/api/users/cart`,
         { productId, quantity: newQuantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -104,7 +104,7 @@ const ShoppingCart = () => {
     try {
       setIsUpdating(true);
       // Make a DELETE request to remove the item from the cart
-      await axios.delete(`${config.API_BASE_URL}/users/cart/item/${productId}`, {
+      await axios.delete(`${config.API_BASE_URL}/api/users/cart/item/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchCart(); // Refresh the cart after removing the item

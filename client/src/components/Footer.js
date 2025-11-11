@@ -27,16 +27,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Customer Service */}
-        <div className="footer-section">
-          <h4>Customer Service</h4>
-          <div className="footer-links">
-            <a href="#contact">Contact Us</a>
-            <a href="#shipping">Shipping Info</a>
-            <a href="#returns">Returns</a>
-          </div>
-        </div>
-
         {/* Contact Info */}
         <div className="footer-section">
           <h4>Contact</h4>

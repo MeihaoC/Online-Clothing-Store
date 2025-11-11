@@ -28,7 +28,7 @@ const UserProfile = ({ loggedInUser }) => {
 
       try {
         // Make a GET request to fetch profile data
-        const response = await axios.get(`${config.API_BASE_URL}/users/profile`, {
+        const response = await axios.get(`${config.API_BASE_URL}/api/users/profile`, {
           headers: { Authorization: `Bearer ${token}` }, // Pass token in headers for authentication
         });
 

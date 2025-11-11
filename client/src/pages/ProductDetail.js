@@ -27,7 +27,7 @@ const ProductDetail = () => {
     const fetchProduct = async () => {
       try {
         // Make a GET request to fetch product details
-        const response = await axios.get(`${config.API_BASE_URL}/products/${id}`);
+        const response = await axios.get(`${config.API_BASE_URL}/api/products/${id}`);
         // Handle the new response format: { success: true, product: {...} }
         const productData = response.data.product || response.data;
         setProduct(productData); // Set product details in state
@@ -61,7 +61,7 @@ const ProductDetail = () => {
     try {
       // Make a POST request to add the product to the user's cart
       const response = await axios.post(
-        `${config.API_BASE_URL}/users/cart`,
+        `${config.API_BASE_URL}/api/users/cart`,
         { productId: id, quantity, size: selectedSize },
         { headers: { Authorization: `Bearer ${token}` } } // Include token in headers
       );

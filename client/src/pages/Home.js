@@ -25,7 +25,7 @@ const HomePage = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get(`${config.API_BASE_URL}/products`);
+        const response = await axios.get(`${config.API_BASE_URL}/api/products`);
         console.log("API Response:", response.data); // Debug log
         
         // Handle paginated response or direct array
