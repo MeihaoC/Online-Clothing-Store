@@ -10,11 +10,14 @@
 /* Main content area including sidebar and products */
 .homepage-content {
   display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items to top to prevent vertical stretching */
   padding: 30px; /* Add spacing inside the container */
   background-color: #fff; /* White background */
   max-width: 1400px; /* Maximum width */
   margin: 0 auto; /* Center */
   gap: 30px; /* Gap between sidebar and products */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Sidebar styling */
@@ -23,15 +26,19 @@
   min-width: 250px; /* Prevent shrinking */
   max-width: 250px; /* Prevent expanding */
   flex-shrink: 0; /* Prevent flexbox from shrinking the sidebar */
+  flex-grow: 0; /* Prevent flexbox from growing the sidebar */
   padding: 25px; /* Add spacing inside the sidebar */
   background-color: #fff; /* White background for the sidebar */
   border: 1px solid #e0e0e0; /* Light border */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
   height: fit-content; /* Fit content height */
+  max-height: calc(100vh - 120px); /* Maximum height to prevent overflow */
   position: sticky; /* Sticky positioning */
   top: 100px; /* Stick below navbar */
   box-sizing: border-box; /* Include padding and border in width calculation */
+  align-self: flex-start; /* Align to start to prevent stretching */
+  overflow-y: auto; /* Allow scrolling if content exceeds max-height */
 }
 
 .sidebar-title {
@@ -96,6 +103,11 @@
 .products {
   flex: 1; /* Products section takes up remaining space */
   min-width: 0; /* Prevent overflow */
+  min-height: 400px; /* Minimum height to prevent layout shift during loading */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  width: 0; /* Force flexbox to calculate width correctly */
+  align-self: flex-start; /* Align to start to prevent stretching */
 }
 
 /* Header for the products section */
@@ -168,8 +180,12 @@
 /* Grid layout for products */
 .products-grid {
   display: grid; /* Use CSS grid for product layout */
-  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal-width columns with minmax for stability */
   gap: 30px; /* Space between grid items */
+  min-height: 300px; /* Minimum height to prevent layout shift during loading */
+  align-content: start; /* Align content to start to prevent stretching */
+  width: 100%; /* Full width of container */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Individual product card styling */
@@ -260,6 +276,10 @@
   padding: 60px 20px; /* Padding */
   color: #666; /* Gray color */
   font-size: 1.1rem; /* Font size */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-height: 300px; /* Minimum height to match grid layout */
 }
 
 .error-state {
@@ -271,6 +291,11 @@
   grid-column: 1 / -1; /* Span all columns */
   text-align: center; /* Center align */
   padding: 80px 20px; /* Padding */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 300px; /* Minimum height to match grid layout */
 }
 
 .empty-state-title {
@@ -312,7 +337,7 @@
 /* Responsive design for smaller screens */
 @media (max-width: 1200px) {
   .products-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns for medium screens */
     gap: 25px;
   }
   
@@ -327,7 +352,7 @@
 
 @media (max-width: 992px) {
   .products-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns for tablets */
     gap: 20px;
   }
   
@@ -367,7 +392,7 @@
   }
   
   .products-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns for mobile */
     gap: 15px;
   }
   
@@ -398,7 +423,7 @@
   }
   
   .products-grid {
-    grid-template-columns: 1fr; /* Single column for very small screens */
+    grid-template-columns: minmax(0, 1fr); /* Single column for very small screens */
     gap: 20px;
   }
   

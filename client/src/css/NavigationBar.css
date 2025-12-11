@@ -71,20 +71,25 @@
 }
 
 /* Search icon inside the search button */
-.search-button .fa-search {
-  color: white; /* White color for the search icon */
-  font-size: 1rem; /* Icon size */
+.search-button .fa-search,
+.search-button svg {
+  color: white !important; /* White color for the search icon with important to override any other styles */
+  font-size: 1.2rem; /* Slightly larger icon size for better visibility */
   transition: color 0.2s ease; /* Smooth transition */
+  display: inline-block; /* Ensure proper display */
 }
 
 /* Keep icon color consistent on hover */
 .search-button:hover .fa-search,
-.search-button:focus .fa-search {
-  color: #ccc; /* Light gray color on hover/focus */
+.search-button:hover svg,
+.search-button:focus .fa-search,
+.search-button:focus svg {
+  color: #ccc !important; /* Light gray color on hover/focus */
 }
 
-.search-button:active .fa-search {
-  color: #999; /* Gray on active */
+.search-button:active .fa-search,
+.search-button:active svg {
+  color: #999 !important; /* Gray on active */
 }
 
 /* Navbar links styling */
